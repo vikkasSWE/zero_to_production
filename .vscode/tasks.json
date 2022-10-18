@@ -18,6 +18,15 @@
 			],
 			"group": "build",
 			"label": "cargo run"
+		},
+		{
+			"type": "cargo",
+			"command": "watch",
+			"problemMatcher": [
+				"$rustc"
+			],
+			"group": "build",
+			"label": "cargo watch"
 		}
 	]
 }
