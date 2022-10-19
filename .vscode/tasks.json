@@ -27,6 +27,15 @@
 			],
 			"group": "build",
 			"label": "cargo watch"
+		},
+		{
+			"type": "cargo",
+			"command": "test",
+			"problemMatcher": [
+				"$rustc"
+			],
+			"group": "build",
+			"label": "cargo test"
 		}
 	]
 }
