@@ -1,3 +1,5 @@
+use std::fmt::format;
+
 use config::{Config, ConfigError, File};
 use serde::Deserialize;
 
@@ -22,4 +24,13 @@ pub fn get_configuration() -> Result<Settings, ConfigError> {
     settings.merge(File::with_name("configuration.yaml"))?;
 
     settings.try_into()
+}
+
+impl DatabaseSettings {
+    pub fn connect_string(&self) -> String {
+        format!(
+            "postgres://{}:{}@{}:{}/{}",
+            self.username, self.password, self.host, self.port, self.database_name
+        )
+    }
 }
