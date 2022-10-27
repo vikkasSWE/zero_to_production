@@ -12,16 +12,15 @@ path = "src/main.rs"
 name = "zero_to_production"
 
 [dependencies]
-actix-web = "4.2.1"
-config = "0.11"
-env_logger = "0.9.1"
-serde = {version = "1.0.145", features   = ["derive"]}
-tokio = { version = "1.21.2", features = ["macros", "rt-multi-thread"] }
-uuid = { version = "1.2.1", features = ["v4"] }
-chrono = "0.4.15"
+actix-web = "4"
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+serde = "1.0.115"
+config = { version = "0.13", default-features = false, features = ["yaml"] }
+uuid = { version = "1", features = ["v4"] }
+chrono = { version = "0.4.22", default-features = false, features = ["clock"] }
 
 [dependencies.sqlx]
-version = "0.6.2"
+version = "0.6"
 default-features = false
 features = [
     "runtime-actix-rustls",
@@ -34,5 +33,5 @@ features = [
 
 
 [dev-dependencies]
-reqwest = "0.11.12"
+reqwest = { version = "0.11", features = ["json"] }
 

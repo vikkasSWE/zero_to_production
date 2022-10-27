@@ -1,4 +1,4 @@
-use config::{Config, ConfigError, File};
+use config::{Config, ConfigError, File, FileFormat};
 use serde::Deserialize;
 
 #[derive(Deserialize)]
@@ -17,11 +17,10 @@ pub struct DatabaseSettings {
 }
 
 pub fn get_configuration() -> Result<Settings, ConfigError> {
-    let mut settings = Config::default();
-
-    settings.merge(File::with_name("configuration.yaml"))?;
-
-    settings.try_into()
+    let settings = Config::builder()
+        .add_source(File::new("configuration.yaml", FileFormat::Yaml))
+        .build()?;
+    settings.try_deserialize::<Settings>()
 }
 
 impl DatabaseSettings {
