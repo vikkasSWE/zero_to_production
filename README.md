@@ -1,7 +1,7 @@
 # zero_to_production
 
 ## Progress in book
-Chapter -> 4
+Chapter -> 4.5.2
 
 ## Database
 * install docker
