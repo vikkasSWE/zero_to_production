@@ -1,12 +1,13 @@
-use env_logger::Env;
 use sqlx::PgPool;
 use std::net::TcpListener;
 use zero_to_production::configuration::get_configuration;
 use zero_to_production::startup::run;
+use zero_to_production::telemetry::{get_subscriber, init_subscriber};
 
 #[tokio::main]
 async fn main() -> std::io::Result<()> {
-    env_logger::Builder::from_env(Env::default().default_filter_or("info")).init();
+    let subscriber = get_subscriber("Zero to Production".into(), "info".into(), std::io::stdout);
+    init_subscriber(subscriber);
 
     let configuration = get_configuration().expect("Failed to read configuration.");
 

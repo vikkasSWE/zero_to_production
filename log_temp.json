@@ -1,0 +1,101 @@
+{
+    "v": 0,
+    "name": "Zero to Production",
+    "msg": "Starting 16 workers",
+    "level": 30,
+    "hostname": "vikkas-PC",
+    "pid": 9632,
+    "time": "2022-10-31T06:36:14.67128Z",
+    "target": "actix_server::builder",
+    "line": 200,
+    "file": "C:\\Users\\vikto\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\actix-server-2.1.1\\src\\builder.rs"
+}
+{
+    "v": 0,
+    "name": "Zero to Production",
+    "msg": "Tokio runtime found; starting in existing Tokio runtime",
+    "level": 30,
+    "hostname": "vikkas-PC",
+    "pid": 9632,
+    "time": "2022-10-31T06:36:14.6719203Z",
+    "target": "actix_server::server",
+    "line": 197,
+    "file": "C:\\Users\\vikto\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\actix-server-2.1.1\\src\\server.rs"
+}
+{
+    "v": 0,
+    "name": "Zero to Production",
+    "msg": "[ADDING A NEW SUBSCRIBER. - START]",
+    "level": 30,
+    "hostname": "vikkas-PC",
+    "pid": 9632,
+    "time": "2022-10-31T06:36:20.7471435Z",
+    "target": "zero_to_production::routes::subscriptions",
+    "line": 16,
+    "file": "src\\routes\\subscriptions.rs",
+    "subscriber_email": "thomas_an@hotmail.com",
+    "subscriber_name": "nia",
+    "request_id": "bb3854b5-985a-4f28-a2af-1cc734de3625"
+}
+{
+    "v": 0,
+    "name": "Zero to Production",
+    "msg": "[SAVING NEW SUBSCRIBER DETAILS IN THE DATABASE. - START]",
+    "level": 30,
+    "hostname": "vikkas-PC",
+    "pid": 9632,
+    "time": "2022-10-31T06:36:20.7476469Z",
+    "target": "zero_to_production::routes::subscriptions",
+    "line": 19,
+    "file": "src\\routes\\subscriptions.rs",
+    "subscriber_email": "thomas_an@hotmail.com",
+    "subscriber_name": "nia",
+    "request_id": "bb3854b5-985a-4f28-a2af-1cc734de3625"
+}
+{
+    "v": 0,
+    "name": "Zero to Production",
+    "msg": "[SAVING NEW SUBSCRIBER DETAILS IN THE DATABASE. - END]",
+    "level": 30,
+    "hostname": "vikkas-PC",
+    "pid": 9632,
+    "time": "2022-10-31T06:36:20.7508507Z",
+    "target": "zero_to_production::routes::subscriptions",
+    "line": 19,
+    "file": "src\\routes\\subscriptions.rs",
+    "subscriber_name": "nia",
+    "request_id": "bb3854b5-985a-4f28-a2af-1cc734de3625",
+    "subscriber_email": "thomas_an@hotmail.com",
+    "elapsed_milliseconds": 2
+}
+{
+    "v": 0,
+    "name": "Zero to Production",
+    "msg": "[ADDING A NEW SUBSCRIBER. - EVENT] Failed to execute query: Database(PgDatabaseError { severity: Error, code: \"23505\", message: \"duplicate key value violates unique constraint \\\"subscriptions_email_key\\\"\", detail: Some(\"Key (email)=(thomas_an@hotmail.com) already exists.\"), hint: None, position: None, where: None, schema: Some(\"public\"), table: Some(\"subscriptions\"), column: None, data_type: None, constraint: Some(\"subscriptions_email_key\"), file: Some(\"nbtinsert.c\"), line: Some(664), routine: Some(\"_bt_check_unique\") })",
+    "level": 50,
+    "hostname": "vikkas-PC",
+    "pid": 9632,
+    "time": "2022-10-31T06:36:20.7513926Z",
+    "target": "zero_to_production::routes::subscriptions",
+    "line": 37,
+    "file": "src\\routes\\subscriptions.rs",
+    "subscriber_email": "thomas_an@hotmail.com",
+    "subscriber_name": "nia",
+    "request_id": "bb3854b5-985a-4f28-a2af-1cc734de3625"
+}
+{
+    "v": 0,
+    "name": "Zero to Production",
+    "msg": "[ADDING A NEW SUBSCRIBER. - END]",
+    "level": 30,
+    "hostname": "vikkas-PC",
+    "pid": 9632,
+    "time": "2022-10-31T06:36:20.7520725Z",
+    "target": "zero_to_production::routes::subscriptions",
+    "line": 16,
+    "file": "src\\routes\\subscriptions.rs",
+    "subscriber_name": "nia",
+    "request_id": "bb3854b5-985a-4f28-a2af-1cc734de3625",
+    "subscriber_email": "thomas_an@hotmail.com",
+    "elapsed_milliseconds": 4
+}
