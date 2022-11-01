@@ -1,16 +1,13 @@
 name: Rust
 
 on:
-  # NB: this differs from the book's project!
-  # These settings allow us to run this specific CI pipeline for PRs against
-  # this specific branch (a.k.a. book chapter).
   push:
     branches:
-      - root-chapter-03-part1
+      - dev-chapter_4
   pull_request:
     types: [ opened, synchronize, reopened ]
     branches:
-      - root-chapter-03-part1
+      - dev-chapter_4
 
 env:
   CARGO_TERM_COLOR: always
@@ -73,6 +70,7 @@ jobs:
       - name: Migrate database
         run: |
           sudo apt-get install libpq-dev -y
+          sudo chmod +x ./scripts/init_db.sh
           SKIP_DOCKER=true ./scripts/init_db.sh
       - name: Run cargo test
         uses: actions-rs/cargo@v1
@@ -143,6 +141,7 @@ jobs:
       - name: Migrate database
         run: |
           sudo apt-get install libpq-dev -y
+          sudo chmod +x ./scripts/init_db.sh
           SKIP_DOCKER=true ./scripts/init_db.sh
       - name: Run clippy
         uses: actions-rs/clippy-check@v1
@@ -198,6 +197,7 @@ jobs:
       - name: Migrate database
         run: |
           sudo apt-get install libpq-dev -y
+          sudo chmod +x ./scripts/init_db.sh
           SKIP_DOCKER=true ./scripts/init_db.sh
       - name: Run cargo-tarpaulin
         uses: actions-rs/tarpaulin@v0.1

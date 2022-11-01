@@ -2,40 +2,52 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"type": "cargo",
-			"command": "build",
-			"problemMatcher": [
-				"$rustc"
+			"type": "process",
+			"label": "cargo build",
+			"command": "cargo",
+			"args": [
+				"build"
 			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
 			"group": "build",
-			"label": "cargo build"
 		},
 		{
-			"type": "cargo",
-			"command": "run",
-			"problemMatcher": [
-				"$rustc"
+			"type": "process",
+			"label": "cargo run",
+			"command": "cargo",
+			"args": [
+				"run"
 			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
 			"group": "build",
-			"label": "cargo run"
 		},
 		{
-			"type": "cargo",
-			"command": "watch",
-			"problemMatcher": [
-				"$rustc"
+			"type": "process",
+			"label": "cargo watch",
+			"command": "cargo",
+			"args": [
+				"watch"
 			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
 			"group": "build",
-			"label": "cargo watch"
 		},
 		{
-			"type": "cargo",
-			"command": "test",
-			"problemMatcher": [
-				"$rustc"
+			"type": "process",
+			"label": "cargo test",
+			"command": "cargo",
+			"args": [
+				"test"
 			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
 			"group": "build",
-			"label": "cargo test"
 		}
 	]
 }
