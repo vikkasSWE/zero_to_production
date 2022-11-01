@@ -48,9 +48,6 @@ pub async fn insert_subscriber(
     .map_err(|e| {
         tracing::error!("Failed to execute query: {:?}", e);
         e
-        // Using the `?` operator to return early
-        // if the function failed, returning a sqlx::Error
-        // We will talk about error handling in depth later!
     })?;
 
     Ok(())
